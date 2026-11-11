@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Portal | CarbonTraceAI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">🌍 CarbonTrace<span>AI</span></a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <button id="logoutBtn" class="link-button">Logout</button>
+    </div>
+</nav>
+
+<main class="page-container">
+
+    <div class="page-heading">
+        <div class="eyebrow">SUPPLIER WORKSPACE</div>
+        <h1>Supplier <span>Portal</span></h1>
+        <p>Submit your operational activities and sustainability documents.</p>
+    </div>
+
+    <div class="two-column">
+
+        <section class="glass-card panel">
+            <h2>⚡ Add Activity</h2>
+            <p>Enter your supplier activity details.</p>
+
+            <form id="activityForm">
+
+                <label>Activity Category</label>
+                <select name="category" required>
+                    <option value="">Choose category</option>
+                    <option value="electricity">Electricity</option>
+                    <option value="fuel">Fuel</option>
+                    <option value="transport">Transportation</option>
+                    <option value="waste">Waste</option>
+                </select>
+
+                <label>Quantity</label>
+                <input type="number" name="quantity"
+                       min="0.001" step="any"
+                       placeholder="Enter quantity" required>
+
+                <label>Unit</label>
+                <select name="unit" required>
+                    <option value="">Select unit</option>
+                    <option value="kWh">kWh – Electricity</option>
+                    <option value="litre">Litre – Fuel</option>
+                    <option value="tonne-km">Tonne-km – Transport</option>
+                    <option value="kg">kg – Waste</option>
+                </select>
+
+                <label>Activity Date</label>
+                <input type="date" name="activityDate" required>
+
+                <label>Additional Notes</label>
+                <textarea name="notes" rows="3"
+                          placeholder="Enter activity details"></textarea>
+
+                <button type="submit" class="btn btn-full">
+                    Submit Activity →
+                </button>
+
+            </form>
+        </section>
+
+        <section class="glass-card panel">
+            <h2>📁 Document Upload</h2>
+            <p>Upload supplier invoices and sustainability reports.</p>
+
+            <form id="uploadForm">
+                <label>Select Document</label>
+
+                <input type="file" name="document"
+                       accept=".pdf,.jpg,.jpeg,.png" required>
+
+                <p class="file-note">Accepted formats: PDF, JPG, PNG. Maximum 5 MB.</p>
+
+                <button type="submit" class="btn btn-full">
+                    Upload Document ↑
+                </button>
+            </form>
+
+            <div id="uploadResult" class="message"></div>
+
+            <div class="document-list">
+                <h3>Uploaded Documents</h3>
+                <ul id="documentList">
+                    <li>Loading documents...</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="glass-card panel">
+        <div class="section-heading-inline">
+            <h2>Recent Activities</h2>
+            <a href="dashboard.html">View Dashboard →</a>
+        </div>
+
+        <div id="activityList">
+            <p>Loading activities...</p>
+        </div>
+    </section>
+
+    <p id="supplierMessage" class="message"></p>
+
+</main>
+
+<script src="js/supplier.js"></script>
+</body>
+</html>

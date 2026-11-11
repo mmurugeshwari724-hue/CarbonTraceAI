@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CarbonTraceAI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">🌍 CarbonTrace<span>AI</span></a>
+    <div class="nav-links">
+        <a href="supplier.html">Supplier Portal</a>
+        <a href="admin.html" id="adminLink" class="hidden">Admin</a>
+        <button id="logoutBtn" class="link-button">Logout</button>
+    </div>
+</nav>
+
+<main class="page-container">
+
+    <div class="page-heading">
+        <div class="eyebrow">AI CARBON INTELLIGENCE</div>
+        <h1>Carbon <span>Dashboard</span></h1>
+        <p>Monitor your supplier's estimated carbon emissions.</p>
+    </div>
+
+    <div class="stats-grid">
+
+        <article class="glass-card stat-card">
+            <span>🌍</span>
+            <p>Total Estimated Emissions</p>
+            <h2 id="totalEmissions">0.00</h2>
+            <small>kg CO₂e</small>
+        </article>
+
+        <article class="glass-card stat-card">
+            <span>📊</span>
+            <p>Activities Recorded</p>
+            <h2 id="activityCount">0</h2>
+            <small>Total entries</small>
+        </article>
+
+        <article class="glass-card stat-card">
+            <span>⚡</span>
+            <p>Highest Emission Category</p>
+            <h2 id="topCategory">—</h2>
+            <small>Based on recorded activities</small>
+        </article>
+
+    </div>
+
+    <section class="glass-card panel">
+        <div class="section-heading-inline">
+            <h2>Emission Breakdown</h2>
+            <a href="supplier.html">+ Add Activity</a>
+        </div>
+
+        <div id="breakdown">
+            <p>Loading emission data...</p>
+        </div>
+    </section>
+
+    <section class="glass-card panel">
+        <h2>🌱 Sustainability Insights</h2>
+        <div id="recommendations">
+            <p>Recommendations will appear when activity data is available.</p>
+        </div>
+    </section>
+
+    <section class="glass-card panel">
+        <h2>🚨 Anomaly Review</h2>
+        <div id="anomalyResults">
+            <p>Anomaly analysis is not connected yet. Review unusual activity values with the AI demo module.</p>
+        </div>
+    </section>
+
+    <p class="file-note">
+        Prototype estimates only. Emission factors are illustrative and are not official reporting values.
+    </p>
+
+    <p id="dashboardMessage" class="message"></p>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

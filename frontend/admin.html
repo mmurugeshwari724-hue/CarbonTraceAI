@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | CarbonTraceAI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">🌍 CarbonTrace<span>AI</span></a>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <button id="logoutBtn" class="link-button">Logout</button>
+    </div>
+</nav>
+
+<main class="page-container">
+
+    <div class="page-heading">
+        <div class="eyebrow">SYSTEM CONTROL CENTER</div>
+        <h1>Admin <span>Panel</span></h1>
+        <p>Monitor registered suppliers and submitted activities.</p>
+    </div>
+
+    <section class="glass-card panel">
+        <h2>🏢 Registered Suppliers</h2>
+        <div id="supplierTable">
+            <p>Loading supplier information...</p>
+        </div>
+    </section>
+
+    <section class="glass-card panel">
+        <h2>📊 Supplier Activities</h2>
+        <div id="adminActivities">
+            <p>Loading activity information...</p>
+        </div>
+    </section>
+
+    <p id="adminMessage" class="message"></p>
+
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
